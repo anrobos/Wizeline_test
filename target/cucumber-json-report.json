@@ -1,0 +1,28 @@
+
+@OK
+Scenario Outline: Hacer login con el usuario correcto testuser@example.com                   [90m# src/test/resources/features/login.feature:18[0m
+  [32mGiven [0m[32mNos encontramos en la pagina inicial con titulo "[0m[32m[1mSample Website for Galen Framework[0m[32m"[0m [90m# steps.MainPageSteps.<init>(MainPageSteps.java:16)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mPulsamos acceso login[0m                                                                 [90m# steps.MainPageSteps.<init>(MainPageSteps.java:25)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mNos encontramos en la pagina de login: "[0m[32m[1mLogin[0m[32m"[0m                                        [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:17)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mRellenamos campos login con usuario "[0m[32m[1mtestuser@example.com[0m[32m" y password "[0m[32m[1mtest123[0m[32m"[0m       [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:27)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mPulsamos login[0m                                                                        [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:34)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mThen [0m[32mNos encontramos en la pagina de Mynotes: "[0m[32m[1mMy Notes[0m[32m"[0m                                   [90m# steps.MynotesPageSteps.<init>(MynotesPageSteps.java:18)[0m
+
+@KO
+Scenario Outline: Hacer login con el usuario incorrecto error@example.com                    [90m# src/test/resources/features/login.feature:37[0m
+  [32mGiven [0m[32mNos encontramos en la pagina inicial con titulo "[0m[32m[1mSample Website for Galen Framework[0m[32m"[0m [90m# steps.MainPageSteps.<init>(MainPageSteps.java:16)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mPulsamos acceso login[0m                                                                 [90m# steps.MainPageSteps.<init>(MainPageSteps.java:25)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mNos encontramos en la pagina de login: "[0m[32m[1mLogin[0m[32m"[0m                                        [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:17)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mRellenamos campos login con usuario "[0m[32m[1merror@example.com[0m[32m" y password "[0m[32m[1mtest123[0m[32m"[0m          [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:27)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mWhen [0m[32mPulsamos login[0m                                                                        [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:34)[0m
+  [32mWhen [0m[32mWaitt[0m                                                                                 [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:23)[0m
+  [32mThen [0m[32mSe muestra mensaje: "[0m[32m[1mThe username or password are incorrect[0m[32m"[0m                          [90m# steps.LoginPageSteps.<init>(LoginPageSteps.java:39)[0m
