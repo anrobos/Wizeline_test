@@ -7,17 +7,11 @@ This project implements a solution for Wizeline Automation Challenge.
 
 * The driver for the browser where you are going to run the tests. For example, if you are going to use Firefox browser, then you need to download the driver at https://github.com/mozilla/geckodriver/releases. 
 
-* Your browser driver has to be included in the "PATH" environment variable. For example, you can create a "/home/myuser/selenium-drivers" folder, containing the drivers of every browser you want to use, and the add this folder to the path environment variable.
-
 * Java JDK 1.8 or above.
 
 ## How to run the test:
 
-Once all the requirements are satisfied, just execute, in the folder :
-
-`mvn test "-Dexec.args=YOURBROWSER"`
-
-Where "YOURBROWSER" must be the name of the browser you want to use to run the tests (Firefox, Chrome, Opera, Edge, Iexplore and Safari are allowed).
+Once all the requirements are satisfied, just execute it
 
 ## Dependencies:
 
